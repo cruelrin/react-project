@@ -19,10 +19,10 @@ const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<string>) => {
+    addTodo: (_state, _action: PayloadAction<string>) => {
       // Add logic to add a new todo to state
     },
-    toggleTodo: (state, action: PayloadAction<number>) => {
+    toggleTodo: (_state, _action: PayloadAction<number>) => {
       // Add logic to toggle todo completion status
     },
   },
