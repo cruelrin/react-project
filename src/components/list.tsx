@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {Todo} from './Todo.tsx'
+import { Todo } from '../components/Todo';
+
 import {Task} from '../types'
 
 
@@ -15,11 +16,14 @@ export function List() {
     
     const [filter, setFilter] = useState<string>('all')
     const addTodo = () => {
-            setTodos([ ...todos, {id: Date.now(), 
-                                  title: '', 
-                                  date: new Date().toLocaleDateString(), 
-                                  status: 'opened'}])
-         }
+        setTodos([...todos, {
+            id: Date.now(),
+            title: 'Create react app', // Здесь указываем текст для новой задачи
+            date: new Date().toLocaleDateString(),
+            status: 'opened'
+        }]);
+    }
+    
          
 
     const editTodo = (id: number | string, updatedTodo: Task) => {
